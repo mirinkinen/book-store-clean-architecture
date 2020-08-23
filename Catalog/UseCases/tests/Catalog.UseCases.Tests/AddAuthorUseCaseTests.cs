@@ -1,5 +1,6 @@
 ﻿using Catalog.BusinessRules.Authors;
 using Catalog.UseCases.AddAuthor;
+using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
@@ -15,8 +16,9 @@ namespace Catalog.UseCases.Tests
             // Arrage
             var authorRepositoryMock = new Mock<IAuthorRepository>();
             var unitOfWorkMock = new Mock<IUnitOfWork>();
+            var loggerMock = new Mock<ILogger<AddAuthorUseCase>>();
 
-            var addAuthorUseCase = new AddAuthorUseCase(authorRepositoryMock.Object, unitOfWorkMock.Object);
+            var addAuthorUseCase = new AddAuthorUseCase(authorRepositoryMock.Object, unitOfWorkMock.Object, loggerMock.Object);
 
             var firstName = "Jane";
             var lastName = "Austen";
