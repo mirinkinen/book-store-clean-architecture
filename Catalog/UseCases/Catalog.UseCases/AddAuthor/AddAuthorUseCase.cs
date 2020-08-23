@@ -2,25 +2,20 @@
 
 namespace Catalog.UseCases.AddAuthor
 {
-    public class AddAuthorUseCase
+    public class AddAuthorUseCase : IUseCase<AddAuthorUseCaseData>
     {
-        private readonly AddAuthorUseCaseData _data;
         private readonly IAuthorRepository _authorRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public AddAuthorUseCase(
-            AddAuthorUseCaseData data,
-            IAuthorRepository authorRepository,
-            IUnitOfWork unitOfWork)
+        public AddAuthorUseCase(IAuthorRepository authorRepository, IUnitOfWork unitOfWork)
         {
-            _data = data;
             _authorRepository = authorRepository;
             _unitOfWork = unitOfWork;
         }
 
-        public void Execute()
+        public void Execute(AddAuthorUseCaseData data)
         {
-            var author = new Author(AuthorID.CreateNewId(), _data.FirstName, _data.LastName, _data.DateOfBirth);
+            var author = new Author(AuthorID.CreateNewId(), data.FirstName, data.LastName, data.DateOfBirth);
 
             _authorRepository.AddAuthor(author);
             _unitOfWork.Save();

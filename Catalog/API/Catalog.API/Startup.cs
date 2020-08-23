@@ -1,3 +1,7 @@
+using Catalog.BusinessRules.Authors;
+using Catalog.DataStore;
+using Catalog.UseCases;
+using Catalog.UseCases.AddAuthor;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +23,12 @@ namespace Catalog.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddOpenApiDocument();
+
+            services.AddScoped<IUseCaseExecutor, SimpleUseCaseExecutor>();
+            services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUseCase<AddAuthorUseCaseData>, AddAuthorUseCase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +49,9 @@ namespace Catalog.API
             {
                 endpoints.MapControllers();
             });
+
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
         }
     }
 }

@@ -1,21 +1,13 @@
-﻿using Catalog.BusinessRules.Authors;
-using System;
+﻿using System;
 
 namespace Catalog.UseCases.AddAuthor
 {
-    public class AddAuthorUseCaseData
+    public class AddAuthorUseCaseData : IUseCaseData
     {
-        public readonly string FirstName;
+        public string FirstName { get; set; }
 
-        public readonly string LastName;
+        public string LastName { get; set; }
 
-        public readonly DateTimeOffset DateOfBirth;
-
-        public AddAuthorUseCaseData(string firstName, string lastName, DateTimeOffset dateOfBirth)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            DateOfBirth = dateOfBirth;
-        }
+        public DateTimeOffset DateOfBirth { get; set; }
     }
 }
