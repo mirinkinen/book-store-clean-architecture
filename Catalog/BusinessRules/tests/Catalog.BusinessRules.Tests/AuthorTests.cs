@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using Catalog.BusinessRules.Authors;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 

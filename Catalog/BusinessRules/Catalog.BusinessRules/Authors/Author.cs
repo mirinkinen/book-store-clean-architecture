@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Catalog.BusinessRules
+namespace Catalog.BusinessRules.Authors
 {
     public class Author
     {

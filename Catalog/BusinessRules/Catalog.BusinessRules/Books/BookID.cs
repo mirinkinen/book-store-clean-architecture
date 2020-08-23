@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Catalog.BusinessRules
+namespace Catalog.BusinessRules.Books
 {
     public class BookID
     {

@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Catalog.BusinessRules.Authors;
+using System;
 
-namespace Catalog.BusinessRules
+namespace Catalog.BusinessRules.Books
 {
     public class Book
     {

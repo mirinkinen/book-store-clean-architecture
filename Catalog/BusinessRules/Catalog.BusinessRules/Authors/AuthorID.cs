@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Catalog.BusinessRules
+namespace Catalog.BusinessRules.Authors
 {
     public class AuthorID
     {
@@ -12,5 +12,10 @@ namespace Catalog.BusinessRules
         }
 
         public Guid Value => _authorID;
+
+        public static AuthorID CreateNewId()
+        {
+            return new AuthorID(Guid.NewGuid());
+        }
     }
 }
