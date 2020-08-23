@@ -24,8 +24,11 @@ namespace Catalog.TextUI
                 DateOfBirth = new DateTime(1775, 12, 16)
             };
 
-            var addAuthorUseCase = serviceProvider.GetService<IUseCase<AddAuthorUseCaseData>>();
-            addAuthorUseCase.Execute(addAuthorUseCaseData);
+            using (var scope = serviceProvider.CreateScope())
+            {
+                var addAuthorUseCase = serviceProvider.GetService<IUseCase<AddAuthorUseCaseData>>();
+                addAuthorUseCase.Execute(addAuthorUseCaseData);
+            }
         }
 
         private static ServiceProvider BuildServiceProvider()
@@ -49,9 +52,9 @@ namespace Catalog.TextUI
 
             // Register implementations.
             serviceCollection
-                .AddSingleton<IAuthorRepository, AuthorRepository>()
-                .AddSingleton<IUnitOfWork, UnitOfWork>()
-                .AddSingleton<IUseCase<AddAuthorUseCaseData>, AddAuthorUseCase>()
+                .AddTransient<IAuthorRepository, AuthorRepository>()
+                .AddTransient<IUnitOfWork, UnitOfWork>()
+                .AddTransient<IUseCase<AddAuthorUseCaseData>, AddAuthorUseCase>()
                 .BuildServiceProvider();
         }
     }
