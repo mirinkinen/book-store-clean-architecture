@@ -7,9 +7,11 @@
 
 ## Cons
 
-- Because WebApi layer references Business layer which references Data layer,
-the data layer can be seen as the heart of the application, which is clearly
-wrong, since the business layer should the heart. Everything should depend on
-the business layer.
+- In this example, WebApi layer references Application layer, which references
+  Business layer which references Data layer. Therefore, the data layer can be
+  seen as the heart of the application, which is clearly wrong, since the business
+  layer should the heart. Everything should depend on the business layer and it
+  should not depend on anything.
 - With DI, WebApi layer can easily use Data layer directly by injecting
-  IBookRepository. This should be prevented.
+  IBookRepository. This is a violatin of this architecture and should be
+  prevented somehow.
