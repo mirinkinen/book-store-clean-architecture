@@ -2,7 +2,7 @@
 
 namespace Books2.Application
 {
-    internal class BookCreationDto
+    public class BookCreationDto
     {
         public string Name { get; set; }
 

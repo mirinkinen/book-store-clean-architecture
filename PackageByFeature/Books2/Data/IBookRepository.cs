@@ -2,7 +2,7 @@
 
 namespace Books2.Data
 {
-    internal interface IBookRepository
+    public interface IBookRepository
     {
         void AddBook(BookEntity book);
 

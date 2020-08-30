@@ -24,9 +24,12 @@ namespace WebApi2
         {
             services.AddControllers().AddApplicationPart(typeof(BooksController).Assembly);
 
-            services.AddScoped<IBookUseCases, BookUseCases>();
-            services.AddScoped<IBookService, BookService>();
-            services.AddSingleton<IBookRepository, BookRepository>();
+            services.Scan(selector => selector.FromAssemblyOf<IBookUseCases>()
+                .AddClasses(false).AsMatchingInterface().WithScopedLifetime());
+            services.Scan(selector => selector.FromAssemblyOf<IBookService>()
+                .AddClasses(false).AsMatchingInterface().WithScopedLifetime());
+            services.Scan(selector => selector.FromAssemblyOf<IBookRepository>()
+                .AddClasses(false).AsMatchingInterface().WithScopedLifetime());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
