@@ -9,41 +9,41 @@ cases. Each example has identical functionality, but the code is structured
 differently to show the trade-offs they have. Each example has an README file,
 which clarifies these trade-offs.
 
-# Package by Layer
+## Package by Layer
 
-## Pros
+### Pros
 
 - Easy to start with, if software architecture is not well undestood.
 
-## Cons
+### Cons
 
 - The reference between busines layer and data layer is wrong.
 - Easy to misuse DI.
 - Components are named by technology.
 - Easy to couple different business concerns.
 
-# Package by Feature architecture
+## Package by Feature architecture
 
-## Pros
+### Pros
 
 - Easy to start with, if software architecture is not well undestood.
 - Screams something about the business context.
 - All the code for the specific business context is in the same place.
 
-## Cons
+### Cons
 
 - The reference between busines layer and data layer is wrong.
 - Easy to misuse DI.
 - Hosting technology is coupled to the component
 
-# Ports and Adapters architecture
+## Ports and Adapters architecture
 
-## Pros
+### Pros
 
 - Business layer is the heart of the application. It depends on nothing!
 - Easier to hide unnecessary details from the high-level policy.
 
-## Cons
+### Cons
 
 - Needs more understanding of good software architecture.
 - Easy to misuse DI.
@@ -60,8 +60,8 @@ which clarifies these trade-offs.
 - Business layer is the heart of the application. It depends on nothing!
 - Easier to hide unnecessary details from the high-level policy.
 - Prevents clients using internal classes, even with DI.
-- The component only has one public interface. 
+- The component only has one public interface.
 
 ## Cons
 
-- None :-) 
+- None :-)
