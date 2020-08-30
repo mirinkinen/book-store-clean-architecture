@@ -1,5 +1,4 @@
-﻿using Books4.Data;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Books4.Business
 {
