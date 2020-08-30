@@ -1,3 +1,4 @@
+using Application;
 using Business;
 using Data;
 using Microsoft.AspNetCore.Builder;
@@ -22,6 +23,7 @@ namespace WebApi
         {
             services.AddControllers();
 
+            services.AddScoped<IBookController, BookController>();
             services.AddScoped<IBookService, BookService>();
             services.AddSingleton<IBookRepository, BookRepository>();
         }

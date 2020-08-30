@@ -1,8 +1,6 @@
 ﻿using Application;
-using Business;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,18 +12,18 @@ namespace WebApi.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private readonly IBookService _bookService;
+        private readonly IBookController _bookController;
 
-        public BooksController(IBookService bookService)
+        public BooksController(IBookController bookController)
         {
-            _bookService = bookService;
+            _bookController = bookController;
         }
 
         // GET: api/books
         [HttpGet]
         public IEnumerable<BookDto> Get()
         {
-            var books = _bookService.GetBooks();
+            var books = _bookController.GetBooks();
 
             return books.Select(book => new BookDto
             {
@@ -41,15 +39,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] BookCreationDto bookCreationDto)
         {
-            var book = new Book
-            {
-                AuthorId = bookCreationDto.AuthorId,
-                DateOfPublication = bookCreationDto.DateOfPublication,
-                Genre = (Genre)Enum.Parse(typeof(Genre), bookCreationDto.Genre, true),
-                Name = bookCreationDto.Name
-            };
-
-            _bookService.AddBook(book);
+            _bookController.AddBook(bookCreationDto);
 
             return Ok();
         }

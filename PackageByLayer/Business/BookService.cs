@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Business
 {
-    public class BookService : IBookService
+    internal class BookService : IBookService
     {
         private readonly IBookRepository _bookRepository;
 
