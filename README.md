@@ -51,7 +51,7 @@ which clarifies these trade-offs.
 - Easy to couple different business concerns. This can be mitigated by using DDD
   pattern.
 
-  # Package by Component architecture
+# Package by Component architecture
 
 ## Pros
 
