@@ -22,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "PackageByLayer\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "PackageByLayer\Data\Data.csproj", "{D87C4515-76EF-4F61-A87E-ED903AB3FDDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{8EA9622C-7F5F-4E92-95D3-A7CB891E64C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "PackageByLayer\Application\Application.csproj", "{8EA9622C-7F5F-4E92-95D3-A7CB891E64C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
