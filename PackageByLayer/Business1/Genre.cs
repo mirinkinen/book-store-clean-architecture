@@ -1,6 +1,6 @@
 ﻿namespace Business1
 {
-    internal enum Genre
+    public enum Genre
     {
         Action,
         Drama,

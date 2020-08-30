@@ -10,7 +10,7 @@ namespace WebApi1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    internal class BooksController : ControllerBase
+    public class BooksController : ControllerBase
     {
         private readonly IBookUseCases _bookController;
 
