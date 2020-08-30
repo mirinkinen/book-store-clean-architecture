@@ -1,11 +1,1 @@
-﻿# Package by Layer
-
-## Pros
-
-- Easy to understand
-- Does not need Dependency Inversion, but can use it.
-
-## Cons
-
-- The reference between busines layer and data layer is wrong.
-- Its easy to use class from layers that should not be used.
+﻿

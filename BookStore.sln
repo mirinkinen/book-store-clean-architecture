@@ -13,7 +13,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PackageByLayer", "PackageByLayer", "{79BFDADF-068A-4EE0-870A-50B1DB9754D6}"
 	ProjectSection(SolutionItems) = preProject
 		PackageByLayer\ComponentArchitecture.dgml = PackageByLayer\ComponentArchitecture.dgml
-		PackageByLayer\README.md = PackageByLayer\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi1", "PackageByLayer\WebApi1\WebApi1.csproj", "{940947E3-7A12-42BB-B3D4-852E67E33069}"
@@ -27,7 +26,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PackageByFeature", "PackageByFeature", "{DED32D0D-F391-4582-BCEB-5631BDF46782}"
 	ProjectSection(SolutionItems) = preProject
 		PackageByFeature\ComponentArchitecture.dgml = PackageByFeature\ComponentArchitecture.dgml
-		PackageByFeature\README.md = PackageByFeature\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi2", "PackageByFeature\WebApi2\WebApi2.csproj", "{691CB80C-22EE-4267-9D1B-57942507DA91}"
@@ -49,14 +47,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PackageByComponent", "PackageByComponent", "{47615999-D49A-47AB-9AE9-1DD7491080B5}"
 	ProjectSection(SolutionItems) = preProject
 		PackageByComponent\ComponentArchitecture.dgml = PackageByComponent\ComponentArchitecture.dgml
-		PackageByComponent\README.md = PackageByComponent\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books2", "PackageByFeature\Books2\Books2.csproj", "{FA3F6CC2-0E61-4028-8105-6922F60573C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi4", "PackageByComponent\WebApi4\WebApi4.csproj", "{865562A2-F5B8-4B8F-BC73-4758D984C8AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi4", "PackageByComponent\WebApi4\WebApi4.csproj", "{865562A2-F5B8-4B8F-BC73-4758D984C8AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books4", "PackageByComponent\Books4\Books4.csproj", "{511BC6B4-C676-44CA-8E05-60541D18C8F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books4", "PackageByComponent\Books4\Books4.csproj", "{511BC6B4-C676-44CA-8E05-60541D18C8F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
