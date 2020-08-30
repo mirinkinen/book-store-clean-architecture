@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Books4.Business
 {
-    public interface IBookRepository
+    internal interface IBookRepository
     {
         void AddBook(Book book);
 

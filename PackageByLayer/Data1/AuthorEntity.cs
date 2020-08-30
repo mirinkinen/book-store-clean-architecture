@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Data1
 {
-    public class AuthorEntity
+    internal class AuthorEntity
     {
         public AuthorEntity()
         {

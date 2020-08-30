@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Books2.Application
 {
-    public class BookUseCases : IBookUseCases
+    internal class BookUseCases : IBookUseCases
     {
         private readonly IBookService _bookService;
 

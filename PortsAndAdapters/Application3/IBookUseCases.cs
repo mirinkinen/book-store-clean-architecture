@@ -2,7 +2,7 @@
 
 namespace Application3
 {
-    public interface IBookUseCases
+    internal interface IBookUseCases
     {
         void AddBook(BookCreationDto bookCreationDto);
 

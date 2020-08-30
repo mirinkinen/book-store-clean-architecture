@@ -1,6 +1,6 @@
 ﻿namespace Books2.Data
 {
-    public enum Genre
+    internal enum Genre
     {
         Action,
         Drama,

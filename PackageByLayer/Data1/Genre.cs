@@ -1,6 +1,6 @@
 ﻿namespace Data1
 {
-    public enum Genre
+    internal enum Genre
     {
         Action,
         Drama,

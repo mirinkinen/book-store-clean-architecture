@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WebApi3
 {
-    public class Program
+    internal class Program
     {
         public static void Main(string[] args)
         {

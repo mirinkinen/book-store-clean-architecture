@@ -2,7 +2,7 @@
 
 namespace Books2.Data
 {
-    public class BookEntity
+    internal class BookEntity
     {
         public int Id { get; set; }
 

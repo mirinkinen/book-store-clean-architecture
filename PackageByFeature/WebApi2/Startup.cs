@@ -10,7 +10,7 @@ using WebApi2.Controllers;
 
 namespace WebApi2
 {
-    public class Startup
+    internal class Startup
     {
         public Startup(IConfiguration configuration)
         {
