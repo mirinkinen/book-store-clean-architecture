@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Books4.Business
 {
-    public class BookService : IBookService
+    internal class BookService : IBookService
     {
         private readonly IBookRepository _bookRepository;
 

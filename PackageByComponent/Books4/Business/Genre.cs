@@ -1,6 +1,6 @@
 ﻿namespace Books4.Business
 {
-    public enum Genre
+    internal enum Genre
     {
         Action,
         Drama,

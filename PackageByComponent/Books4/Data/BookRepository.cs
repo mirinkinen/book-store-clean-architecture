@@ -9,7 +9,7 @@ namespace Books4.Data
     /// This class is declared 'internal' to demonstrate, that it can be hidden to Business layer but visible to WebApi
     /// layer to be able to register it in the DI collection.
     /// </summary>
-    public class BookRepository : IBookRepository
+    internal class BookRepository : IBookRepository
     {
         private readonly List<Author> _authors;
         private readonly List<Book> _books;

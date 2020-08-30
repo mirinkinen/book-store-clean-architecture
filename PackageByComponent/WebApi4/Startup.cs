@@ -1,6 +1,4 @@
 using Books4.Application;
-using Books4.Business;
-using Books4.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,9 +21,8 @@ namespace WebApi4
         {
             services.AddControllers();
 
-            services.AddScoped<IBookUseCases, BookUseCases>();
-            services.AddScoped<IBookService, BookService>();
-            services.AddSingleton<IBookRepository, BookRepository>();
+            services.Scan(selector => selector.FromAssemblyOf<IBookUseCases>()
+                .AddClasses(false).AsMatchingInterface().WithScopedLifetime());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
