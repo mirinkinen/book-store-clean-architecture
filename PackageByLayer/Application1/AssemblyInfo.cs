@@ -14,5 +14,5 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM.
 
-[assembly: Guid("706ae34f-e367-4db7-afaf-252367d87a59")]
-[assembly: InternalsVisibleTo("WebApi2")]
+[assembly: Guid("efea6485-7f30-413a-9ba2-64ee8f1ae0c5")]
+[assembly: InternalsVisibleTo("WebApi1")]

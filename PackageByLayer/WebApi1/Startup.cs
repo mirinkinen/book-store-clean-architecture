@@ -1,14 +1,13 @@
-using Books2.Application;
-using Books2.Business;
-using Books2.Data;
+using Application1;
+using Business1;
+using Data1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WebApi2.Controllers;
 
-namespace WebApi2
+namespace WebApi1
 {
     public class Startup
     {
@@ -22,7 +21,7 @@ namespace WebApi2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddApplicationPart(typeof(BooksController).Assembly);
+            services.AddControllers();
 
             services.AddScoped<IBookUseCases, BookUseCases>();
             services.AddScoped<IBookService, BookService>();

@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 // values defined in project properties. For details of which attributes are included
 // and how to customise this process see: https://aka.ms/assembly-info-properties
 
+
 // Setting ComVisible to false makes the types in this assembly not visible to COM
 // components.  If you need to access a type in this assembly from COM, set the ComVisible
 // attribute to true on that type.
@@ -14,5 +15,5 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM.
 
-[assembly: Guid("706ae34f-e367-4db7-afaf-252367d87a59")]
-[assembly: InternalsVisibleTo("WebApi2")]
+[assembly: Guid("bfd3c405-d8bd-49e9-9622-53e25302001e")]
+[assembly: InternalsVisibleTo("WebApi1")]

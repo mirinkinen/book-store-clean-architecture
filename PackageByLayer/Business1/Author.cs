@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Books2.Data
+namespace Business1
 {
-    internal class AuthorEntity
+    internal class Author
     {
-        public AuthorEntity()
+        public Author()
         {
-            Books = new List<BookEntity>();
+            Books = new List<Book>();
         }
 
         public int Id { get; set; }
@@ -16,6 +16,6 @@ namespace Books2.Data
 
         public DateTime DateOfBirth { get; set; }
 
-        public List<BookEntity> Books { get; }
+        public List<Book> Books { get; }
     }
 }

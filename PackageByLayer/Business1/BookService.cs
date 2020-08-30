@@ -1,11 +1,11 @@
-﻿using Books2.Data;
+﻿using Data1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Books2.Business
+namespace Business1
 {
-    public class BookService : IBookService
+    internal class BookService : IBookService
     {
         private readonly IBookRepository _bookRepository;
 
@@ -25,7 +25,7 @@ namespace Books2.Business
             {
                 AuthorId = book.AuthorId,
                 DateOfPublication = book.DateOfPublication,
-                Genre = (Data.Genre)book.Genre
+                Genre = (Data1.Genre)book.Genre
             };
 
             _bookRepository.AddBook(bookEntity);

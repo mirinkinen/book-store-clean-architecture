@@ -23,7 +23,7 @@ namespace WebApi3
         {
             services.AddControllers();
 
-            services.AddScoped<IBookController, BookController>();
+            services.AddScoped<IBookUseCases, BookUseCases>();
             services.AddScoped<IBookService, BookService>();
             services.AddSingleton<IBookRepository, BookRepository>();
         }

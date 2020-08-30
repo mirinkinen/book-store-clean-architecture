@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Books2.Data
+namespace Data1
 {
-    internal class AuthorEntity
+    public class AuthorEntity
     {
         public AuthorEntity()
         {

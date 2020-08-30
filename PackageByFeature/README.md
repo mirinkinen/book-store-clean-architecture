@@ -6,6 +6,8 @@
 - Does not need Dependency Inversion, but can use it.
 - Screams something about the context.
 - All the code for the context is in the same place.
+- More classes can be marked as internal, since they are not referenced outside
+  this package.
 
 ## Cons
 
