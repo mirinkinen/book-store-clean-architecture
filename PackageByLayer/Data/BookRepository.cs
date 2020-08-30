@@ -4,7 +4,11 @@ using System.Linq;
 
 namespace Data
 {
-    public class BookRepository : IBookRepository
+    /// <summary>
+    /// This class is declared 'internal' to demonstrate, that it can be hidden to Business layer but visible to WebApi
+    /// layer to be able to register it in the DI collection.
+    /// </summary>
+    internal class BookRepository : IBookRepository
     {
         private readonly List<AuthorEntity> _authors;
         private readonly List<BookEntity> _books;
