@@ -2,7 +2,7 @@
 
 namespace Business3
 {
-    internal interface IBookService
+    public interface IBookService
     {
         void AddBook(Book book);
 

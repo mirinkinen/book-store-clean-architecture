@@ -2,7 +2,7 @@
 
 namespace Application3
 {
-    internal class BookDto
+    public class BookDto
     {
         public int Id { get; set; }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Business3
 {
-    internal class Author
+    public class Author
     {
         public Author()
         {

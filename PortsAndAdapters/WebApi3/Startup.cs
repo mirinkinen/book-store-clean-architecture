@@ -23,9 +23,13 @@ namespace WebApi3
         {
             services.AddControllers();
 
-            services.AddScoped<IBookUseCases, BookUseCases>();
-            services.AddScoped<IBookService, BookService>();
-            services.AddSingleton<IBookRepository, BookRepository>();
+            services.Scan(selector => selector.FromAssemblyOf<IBookUseCases>()
+                .AddClasses(false).AsMatchingInterface().WithScopedLifetime());
+
+            // Since the BookRepository is the only class in the repository and it is internal, the Data3 component is
+            // made visible to main program with InternalsVisibleTo attribute.
+            services.Scan(selector => selector.FromAssembliesOf(typeof(IBookService), typeof(BookRepository))
+                .AddClasses(false).AsMatchingInterface().WithScopedLifetime());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

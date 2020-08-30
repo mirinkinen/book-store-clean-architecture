@@ -2,7 +2,7 @@
 
 namespace Business3
 {
-    internal class Book
+    public class Book
     {
         public int Id { get; set; }
 
